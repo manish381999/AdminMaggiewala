@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Menu.Add_MenuActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:background="@color/Splash_Color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/lato"
+                android:text="Add Item"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_24_dsa"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_58_dsa"
+                android:background="@drawable/edit_text_bg"
+                app:boxBackgroundMode="outline"
+                app:layout_constraintTop_toBottomOf="@id/text1"
+                android:layout_marginTop="@dimen/dp_30_dsa"
+                android:layout_marginStart="@dimen/dp_10_dsa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/dp_10_dsa"
+                app:hintTextColor="@color/Splash_Color"
+                >
+
+                <EditText
+                    android:id="@+id/item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints=""
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="@dimen/dp_10_dsa"
+                    android:hint="Item Name"
+                    android:fontFamily="@font/lato"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/dp_10_dsa"
+                    android:textColor="@color/main_textColor"
+                    android:textColorHint="@color/gray"
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_18_dsa"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_58_dsa"
+                android:background="@drawable/edit_text_bg"
+                app:boxBackgroundMode="outline"
+                app:layout_constraintTop_toBottomOf="@id/text1"
+                android:layout_marginTop="@dimen/dp_20_dsa"
+                android:layout_marginStart="@dimen/dp_10_dsa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/dp_10_dsa"
+                app:hintTextColor="@color/Splash_Color"
+                >
+
+                <EditText
+                    android:id="@+id/item_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints=""
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="@dimen/dp_10_dsa"
+                    android:hint="Item Price"
+                    android:fontFamily="@font/lato"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/dp_10_dsa"
+                    android:textColor="@color/main_textColor"
+                    android:textColorHint="@color/gray"
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_18_dsa"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/add_item_image"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:elevation="5dp"
+                android:layout_gravity="center"
+               android:layout_marginTop="@dimen/dp_20_dsa"
+               >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/circle_yellow"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_add_image"
+                        tools:ignore="ContentDescription" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Item Image"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:fontFamily="@font/lato"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/main_textColor"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_marginTop="16dp"
+                android:layout_width="@dimen/dp_175_dsa"
+                android:layout_height="@dimen/dp_117_dsa"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                tools:ignore="ContentDescription"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_180_dsa"
+                android:background="@drawable/edit_text_bg"
+                app:boxBackgroundMode="outline"
+                app:layout_constraintTop_toBottomOf="@id/text1"
+                android:layout_marginTop="@dimen/dp_20_dsa"
+                android:layout_marginStart="@dimen/dp_10_dsa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/dp_10_dsa"
+                app:hintTextColor="@color/Splash_Color"
+                >
+
+                <EditText
+                    android:id="@+id/short_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_180_dsa"
+                    android:layout_marginTop="@dimen/dp_15_dsa"
+                    android:autofillHints=""
+                    android:elevation="@dimen/dp_8_dsa"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/lato"
+                    android:gravity="top|start"
+                    android:hint="Short Description"
+                    android:inputType="textAutoCorrect|textMultiLine"
+                    android:padding="@dimen/dp_10_dsa"
+                    android:textColor="@color/main_textColor"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/sp_18_dsa"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_180_dsa"
+                android:background="@drawable/edit_text_bg"
+                app:boxBackgroundMode="outline"
+                app:layout_constraintTop_toBottomOf="@id/text1"
+                android:layout_marginTop="@dimen/dp_20_dsa"
+                android:layout_marginStart="@dimen/dp_10_dsa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/dp_10_dsa"
+                app:hintTextColor="@color/Splash_Color"
+                >
+
+                <EditText
+                    android:id="@+id/ingredient"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_180_dsa"
+                    android:layout_marginTop="@dimen/dp_15_dsa"
+                    android:autofillHints=""
+                    android:elevation="@dimen/dp_8_dsa"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/lato"
+                    android:gravity="top|start"
+                    android:hint="Ingredients"
+                    android:inputType="textAutoCorrect|textMultiLine"
+                    android:padding="@dimen/dp_10_dsa"
+                    android:textColor="@color/main_textColor"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/sp_18_dsa"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_item_btn"
+                android:layout_width="@dimen/dp_157_dsa"
+                android:layout_height="@dimen/dp_57_dsa"
+                android:layout_marginTop="@dimen/dp_20_dsa"
+                android:fontFamily="@font/lato_bold"
+                android:text="Add Item"
+                android:layout_gravity="center_horizontal"
+                app:background="@drawable/rectangle_557"
+                app:cornerRadius="@dimen/dp_15_dsa"
+                android:textSize="@dimen/sp_18_dsa"
+                android:layout_marginBottom="@dimen/dp_30_dsa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

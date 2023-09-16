@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dp_22_dsa"
+    android:background="#ffffff"
+   android:backgroundTint="#ffffff"
+    android:layout_margin="@dimen/dp_8_dsa"
+    app:cardElevation="@dimen/dp_5_dsa"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_margin="@dimen/dp_10_dsa"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/item_img"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/place_holder"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="10dp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_18_dsa"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maggie"
+                android:textColor="@color/main_textColor"
+                android:fontFamily="@font/lato"
+                android:textSize="@dimen/sp_18_dsa"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maggie Wala"
+                android:textColor="@color/light_gray"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="@dimen/dp_8_dsa"
+                android:textSize="@dimen/sp_16_dsa"/>
+
+            <TextView
+                android:id="@id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60"
+                android:textColor="#BE1515"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="@dimen/dp_8_dsa"
+                android:textSize="@dimen/sp_24_dsa"/>
+
+
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            
+            <ImageView
+                android:id="@+id/update"
+                android:layout_width="@dimen/dp_34_dsa"
+                android:layout_height="@dimen/dp_34_dsa"
+                android:src="@drawable/ic_update"/>
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_marginTop="@dimen/dp_10_dsa"
+                android:layout_width="@dimen/dp_34_dsa"
+                android:layout_height="@dimen/dp_34_dsa"
+                android:src="@drawable/ic_trash"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

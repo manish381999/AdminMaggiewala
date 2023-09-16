@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AdminMaggieWala" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/Splash_Color</item>
+        <item name="colorPrimaryDark">@color/Splash_Color</item>
+    </style>
+
+    />
+
+
+    <style name="Theme.Transparent" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="colorPrimary">@color/Splash_Color</item>
+        <item name="colorPrimaryDark">@color/Splash_Color</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+</resources>
